@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+body, p {
+  margin: 0;
+  padding: 0;
+}
+
+.timer-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
