@@ -664,9 +664,7 @@ a:hover {
 }
 
 .main-right-bonuses-mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   text-align: left;
   gap: 10px;
 }
@@ -767,6 +765,11 @@ a:hover {
   }
   .main-right-bonuses {
     display: none;
+  }
+  .main-right-bonuses-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .main-right__button {
     display: none;
@@ -928,3 +931,4 @@ a:hover {
     margin-bottom: 50px;
   }
 }
+/*# sourceMappingURL=style.css.map */
