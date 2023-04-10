@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -412,9 +412,18 @@ a:hover {
 }
 
 @media screen and (max-width: 460px) {
+  .header {
+    padding-top: 0;
+  }
+  body {
+    padding-top: 0;
+  }
   .container {
     width: 100%;
     padding: 0 16px;
+  }
+  .bg-ball {
+    display: none;
   }
 }
 
@@ -501,7 +510,6 @@ a:hover {
 
 .mobile-header {
   display: none;
-  position: fixed;
   z-index: 1;
   max-width: 100%;
 }
@@ -523,7 +531,18 @@ a:hover {
   text-transform: uppercase;
 }
 
+.mobile-menu__item a {
+  color: #E4E5EA;
+}
+
 @media screen and (max-width: 460px) {
+  .header {
+    padding-top: 0 !important;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
   .header-body {
     display: none;
   }
@@ -644,6 +663,49 @@ a:hover {
   line-height: 20px;
 }
 
+.main-right-bonuses-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  gap: 10px;
+}
+
+.main-right-bonuses-mobile__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+}
+
+.main-right-bonuses-mobile__item__text {
+  font-size: 13px;
+  line-height: 16px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding-left: 15px;
+  position: relative;
+}
+
+.main-right-bonuses-mobile__item__text::before {
+  content: '';
+  position: absolute;
+  line-height: 16px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 10px;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, #FCB045), to(#FD1D1D));
+  background: linear-gradient(90deg, #FCB045 30%, #FD1D1D);
+}
+
 .main-right__button {
   background-color: #4077F3;
   border: none;
@@ -661,6 +723,54 @@ a:hover {
 .main-right__button:hover {
   background-color: #E4E5EA;
   color: #4077F3;
+}
+
+@media screen and (max-width: 460px) {
+  .main {
+    margin-top: 55px;
+    margin-bottom: 0;
+    padding: 40px 0 60px;
+    background-image: url("./img/bg.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .main-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 45px;
+  }
+  .main-left__title {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 15px;
+  }
+  .main-right {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .main-right__title {
+    text-align: left;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .main-right__title__decor {
+    text-transform: lowercase;
+    background: -webkit-gradient(linear, left top, right top, color-stop(36.99%, #FCB045), to(#FD1D1D));
+    background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .main-right-bonuses {
+    display: none;
+  }
+  .main-right__button {
+    display: none;
+  }
 }
 
 .footer {
@@ -769,4 +879,52 @@ a:hover {
   text-decoration: underline;
   color: #E4E5EA;
 }
-/*# sourceMappingURL=style.css.map */
+
+@media screen and (max-width: 460px) {
+  .footer {
+    padding: 40px 0 60px;
+  }
+  .footer-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+  .footer-left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+  .footer__title {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .footer-links {
+    max-height: 150px;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .footer-links__item {
+    font-size: 14px;
+    line-height: 17px;
+    max-width: 125px;
+    min-width: 0;
+  }
+  .footer-right {
+    text-align: left;
+  }
+  .footer-contacts__messengers {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 8px auto 10px;
+  }
+  .footer__address {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 50px;
+  }
+}
